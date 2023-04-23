@@ -1,3 +1,5 @@
+/*
+
 1. Explain what the simple List component does.
 
 The List component is a React functional component that renders an unordered list of items. It receives an array of items as a prop and maps over this array to create a SingleListItem component for each item in the list. Each SingleListItem component receives a text prop and an index prop, which is the index of the current item in the array.
@@ -45,7 +47,7 @@ const SingleListItem = memo(WrappedSingleListItem);
 const WrappedListComponent = ({
   items,
 }) => {
-  const [selectedIndex, setSelectedIndex] = useState();
+  const [ setSelectedIndex, selectedIndex] = useState();
 
   useEffect(() => {
     setSelectedIndex(null);
@@ -69,4 +71,18 @@ const WrappedListComponent = ({
   )
 };
 
-WrappedListComponent.propTyp
+WrappedListComponent.propTypes = {
+  items: PropTypes.array(PropTypes.shapeOf({
+    text: PropTypes.string.isRequired,
+  })),
+};
+
+WrappedListComponent.defaultProps = {
+  items: null,
+};
+
+const List = memo(WrappedListComponent);
+
+export default List;
+
+*/
