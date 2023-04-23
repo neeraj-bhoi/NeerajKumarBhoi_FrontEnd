@@ -2,14 +2,19 @@
 
 1. Explain what the simple List component does.
 
-The List component is a React functional component that renders an unordered list of items. It receives an array of items as a prop and maps over this array to create a SingleListItem component for each item in the list. Each SingleListItem component receives a text prop and an index prop, which is the index of the current item in the array.
+The List component is a React functional component that renders an unordered list of items. It receives an array of items as
+ a prop and maps over this array to create a SingleListItem component for each item in the list. Each SingleListItem 
+ component receives a text prop and an index prop, which is the index of the current item in the array.
 
 
 2. What problems / warnings are there with code?
 
-one warning shows : React Hook useEffect has a missing dependency: 'setSelectedIndex'. Either include it or remove the dependency array.
+one warning shows : React Hook useEffect has a missing dependency: 'setSelectedIndex'. Either include it or remove the 
+dependency array.
 
-In the WrappedListComponent component, the setSelectedIndex function is being called incorrectly. The useState hook returns an array with two elements, the first being the state variable and the second being a function to update the state variable, both setSelectedIndex and selectedIndex should interchange the positions.
+In the WrappedListComponent component, the setSelectedIndex function is being called incorrectly. The useState hook 
+returns an array with two elements, the first being the state variable and the second being a function to update the 
+state variable, both setSelectedIndex and selectedIndex should interchange the positions.
 
 
 3. Please fix, optimize, and/or modify the component as much as you think is necessary.
